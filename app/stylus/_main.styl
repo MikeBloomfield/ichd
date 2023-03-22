@@ -1,0 +1,694 @@
+//main styles
+.main-wrapper
+	padding 0 0 0 0
+	min-width $min-width
+	width 100%
+	position relative
+	overflow hidden
+	min-height 100%
+	display flex
+	flex-direction column
+	justify-content flex-start	
+
+
+.wrapper
+	min-width $min-width
+	max-width $max-width
+	padding 0 30px 0 30px
+	margin 0 auto
+	position relative
+
+/* titles */
+p
+	font($base-font-size, $base-line-height, $text-color, $custom-font-family, 400)
+
+h1
+	font($font-size-h1, $line-height-h1, $title-color, $custom-font-family, 400)
+	
+
+h2
+	font($font-size-h2, $line-height-h2, $title-color, $custom-font-family, 400)
+
+h3
+	font($font-size-h3, $line-height-h3, $title-color, $custom-font-family, 400)
+
+
+a
+	&:hover
+		opacity .5
+	
+
+/* styles */
+.main
+	min-width $min-width
+	width 100%
+	order 2
+	flex-grow 1
+
+.hero
+	margin-top 172px
+	margin-bottom 150px
+	&__title
+		font-size 110px
+		line-height 92px
+	&__wrapper
+		margin: auto
+		max-width: 750px
+		position relative
+		&-buttons
+			display flex
+			align-items: center
+			justify-content: space-between
+			gap: 0 30px
+		&-bottom
+			display flex
+			justify-content: space-between
+			align-items: center
+			max-width: 1000px
+			margin-left: auto
+			&-inner
+				display flex
+				gap: 0 75px
+				justify-content: space-between
+				align-items: center
+
+	&__prev
+		width: 25px
+		height: 25px;
+		transform: scale(-1, 1);
+		background: url(../img/main/arrow-slider.svg) !important;
+		-webkit-transition: all 0.25s ease-out;
+		transition: all 0.25s ease-out;
+		opacity: 1;
+		z-index: 100;
+		border: none
+		&:hover
+			opacity .5
+		&[slick-disabled]
+			opacity .5
+	&__next
+		width: 25px
+		height: 25px;
+		background: url(../img/main/arrow-slider.svg) !important;
+		-webkit-transition: all 0.25s ease-out;
+		transition: all 0.25s ease-out;
+		opacity: 1;
+		z-index: 100;
+		border: none
+		&:hover
+			opacity .5
+		&[slick-disabled]
+			opacity .5
+	&__title
+		max-width: 851px
+		text-align left
+		text-transform uppercase
+		margin-bottom 58px
+		min-height: 276px
+		&-wrapper
+			overflow: hidden
+			span
+				display inline-block
+			&:last-child span
+				color: $blue
+	&__desc
+		position absolute
+		width: 385px
+		top: 30%
+		left: 64%
+	&__slider
+		margin-top 85px
+		width: 100%
+		&-wrapper
+			margin: auto
+			position relative
+		&-item
+			width: 100vw
+	&__pages
+		position relative
+		color: rgba(54, 54, 54, .5)
+		&-span
+			color: #363636
+			
+
+.slick-track
+	display flex
+
+.video
+	margin-bottom 150px
+	&__wrapper
+		max-width: 788px
+		margin: auto
+		display flex
+		justify-content: space-between
+		align-items: flex-end
+	&__title
+		max-width: 326px
+		text-transform uppercase
+		span
+			color: $blue
+	&__desc
+		max-width: 388px
+		font-size: 14px;
+		line-height: 24px;
+
+
+.services
+	margin-bottom 70px
+	counter-reset: service
+	&__prev
+		width: 25px
+		height: 25px;
+		transform: scale(-1, 1);
+		background: url(../img/main/arrow-slider.svg) !important;
+		-webkit-transition: all 0.25s ease-out;
+		transition: all 0.25s ease-out;
+		opacity: 1;
+		z-index: 100;
+		border: none
+		&:hover
+			opacity .5
+		&[slick-disabled]
+			opacity .5
+	&__next
+		width: 25px
+		height: 25px;
+		background: url(../img/main/arrow-slider.svg) !important;
+		-webkit-transition: all 0.25s ease-out;
+		transition: all 0.25s ease-out;
+		opacity: 1;
+		z-index: 100;
+		border: none
+		&:hover
+			opacity .5
+		&[slick-disabled]
+			opacity .5
+	&__pages
+		margin: auto
+		max-width: 750px
+		position relative
+		&-total
+			opacity .5
+	&__buttons
+		display flex
+		align-items: center
+		justify-content: space-between
+		gap: 0 20px
+	&__wrapper
+		display flex
+		justify-content: center
+		max-width: 1120px
+		margin: auto
+		flex-wrap: wrap
+		gap: 80px
+		& > div
+			width: 520px
+		&-top
+			position relative
+			z-index 30
+	&__wrapper-hide
+		max-width: 100%
+		margin: auto
+		display none
+		.services__item
+			padding-top 0
+			padding-left 52px
+			&:before
+				font-size 30px
+				line-height 34px
+		.services__item-desc
+			max-width: 263px
+			font-size 16px
+			line-height 24px
+			margin-bottom 20px
+		.services__item-top
+			flex-direction: column
+			margin-bottom 20px
+		.services__item-title
+			font-size 30px
+			line-height 34px
+			max-width: 263px
+	.services__pages
+		display none
+		&-span
+			color: #363636
+	&__title
+		text-transform uppercase
+		margin-left 200px
+		span
+			color: $blue
+	&__wrapper-top
+		display flex
+		align-items: flex-start
+		justify-content: space-between
+		max-width: 1120px
+		margin: 0 auto 80px
+		.arrow
+			position relative
+			top 10px
+	&__item
+		counter-increment: service
+		position relative
+		padding-top 85px
+		cursor: pointer
+		&:before
+			content: "0"counter(service)
+			font-size: 38px;
+			line-height: 44px;
+			position absolute
+			top: 0
+			left: 0
+		&:hover
+			.arrow
+				&:before
+					transform: translateX(5px)
+			img
+				transform: scale(1.1)
+		&-pic
+			width: 200px
+			overflow: hidden
+			height: 128px
+			img
+				transition: 1.2s
+				transition-timing-function: linear
+		&-title
+			color: $blue
+			text-transform uppercase
+			max-width: 280px
+		&-top
+			display flex
+			justify-content: space-between
+			gap 40px
+			margin-bottom 30px
+		&-desc
+			margin-bottom 40px
+			max-width: 460px
+
+.stories
+	margin-bottom 150px
+	&__pagination
+		width: auto
+		margin-right 75px
+	&__buttons
+		display flex
+		align-items: center
+		justify-content: space-between
+		gap: 0 30px
+	&__prev
+		width: 25px
+		height: 25px;
+		transform: scale(-1, 1);
+		background: url(../img/main/arrow-slider.svg) !important;
+		-webkit-transition: all 0.25s ease-out;
+		transition: all 0.25s ease-out;
+		opacity: 1;
+		z-index: 100;
+		border: none
+		cursor pointer
+		&:hover
+			opacity .5
+		&[slick-disabled]
+			opacity .5
+	&__next
+		width: 25px
+		height: 25px;
+		background: url(../img/main/arrow-slider.svg) !important;
+		-webkit-transition: all 0.25s ease-out;
+		transition: all 0.25s ease-out;
+		opacity: 1;
+		z-index: 100;
+		border: none
+		cursor pointer
+		&:hover
+			opacity .5
+		&[slick-disabled]
+			opacity .5
+	&__abs
+		position absolute
+		bottom : 0
+		left: 80px
+		width 100%
+		display flex
+		justify-content: flex-start
+		align-items: center
+		.arrow
+			display none
+	&__desc
+		font-size: 14px;
+		line-height: 24px;
+		max-width: 720px
+		margin: 0 auto 80px
+	&__wrapper-top
+		display flex
+		align-items: flex-start
+		justify-content: space-between
+		max-width: 1120px
+		margin: 0 auto 25px
+		.arrow
+			position relative
+			top 10px
+	&__wrapper
+		direction: rtl
+		max-width: 1220px
+		position relative
+		right: 45%
+		&-outer
+			position relative
+	&__item
+		margin: 0 10px
+		max-width: 120px
+	&__story
+		position absolute
+		top: 35%
+		left: 50.3%
+		z-index: 50
+		background: #fff
+		height: 510px
+		&-item
+			padding: 0 980px 122px 80px
+			background: #fff
+			display none
+			&:nth-child(1)
+				display block
+			&-title
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 40px;
+				color: #363636;
+				margin-bottom 12px
+			&-label
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 24px;
+				color: #363636;
+				mix-blend-mode: normal;
+				opacity: 0.5;
+				margin-bottom 31px
+			&-desc
+				font-style: normal;
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 32px;
+				color: #363636;
+				width: 480px
+				&-hidden
+					display none
+					font-style: normal;
+					font-weight: 600;
+					font-size: 18px;
+					line-height: 32px;
+					color: #363636;
+	&__pages
+		position relative
+		right: -57%
+		top: -20px
+		color: rgba(54, 54, 54, .5)
+		z-index 90
+		&-span
+			color: #363636
+
+
+
+
+.map
+	margin-bottom 150px
+	&__wrapper
+		max-width: 720px
+		margin: auto
+	&__outer
+		position relative
+	&__pic
+		margin: 80px 0 150px
+		&-abs
+			position absolute
+			width: 2.34vw
+			top: 0%
+			left: 0%
+			perspective: 600px
+			transform-style: preserve-3d
+			img
+				animation: rotatePins 5s infinite
+				display block
+			&:nth-of-type(2)
+				top: 25%
+				left: 14%
+			&:nth-of-type(3)
+				top: 75%
+				left: 23%
+			&:nth-of-type(4)
+				top: 26%
+				left: 49%
+			&:nth-of-type(4)
+				top: 45%
+				left: 37%
+			&:nth-of-type(5)
+				top: 47%
+				left: 75%
+			&:nth-of-type(6)
+				top: 73%
+				left: 60%
+			&:nth-of-type(7)
+				top: 22%
+				left: 49%
+
+	&__title
+		max-width: 410px
+		text-transform uppercase
+		margin-bottom 25px
+		span
+			color: $blue
+	&__desc
+		max-width: 490px
+		font-size: 14px;
+		line-height: 24px;
+	&__subtitle
+		text-transform uppercase
+		margin-bottom 20px
+		font-size 34px
+		line-height 38px
+	&__desc-bottom
+		margin-bottom 20px
+		max-width: 690px
+		font-size: 14px;
+		line-height: 24px;
+		a
+			color: #008EA5
+	&__wrapper-bottom
+		max-width: 720px
+		display flex
+		justify-content: left
+		gap: 60px
+		margin: 60px auto 0
+		&-pic-1
+			max-width: 147px
+		&-pic-2
+			max-width: 157px
+
+
+
+
+
+.arrow
+	padding-left 34px
+	position relative
+	text-transform uppercase
+	letter-spacing: 2px
+	&:before
+		content ""
+		position absolute
+		display block
+		width: 24px
+		height: 24px
+		background: url(../img/main/arrow.svg)
+		left: 0
+		top: -3px
+		transition: $default-transition
+	&:hover
+		opacity 1
+		&:before
+			transform: translateX(5px)
+
+
+
+
+
+
+.video
+	&__right
+		position relative
+	&__wrapper-block
+		max-width: 1120px
+		margin: auto
+		padding: 120px 15px 0
+		position relative
+	&__abs-1
+		position absolute
+		left: 0
+		top: 20%
+		max-width: 320px
+		z-index 3
+	&__abs-2
+		position absolute
+		right: 50%
+		transform: translateX(50%)
+		top: 30%
+		min-width: 75%
+		z-index 2
+	&__abs-3
+		position absolute
+		right: 6%
+		top: 77%
+		max-width: 320px
+		z-index 1
+	&__block
+		background-size: cover
+		background-repeat: no-repeat
+		text-align: center;
+		overflow: hidden;
+		width: 100%;
+		padding-top: 56.25%;
+		background: #fff
+		&.activeVideo 
+			background: none
+			.video__startBlock
+				opacity 1
+				pointer-events: none
+			.video__iframe
+				opacity 1
+				pointer-events: all
+	&__startBlock
+		width: 100%;
+		position absolute
+		bottom: -80px
+		z-index: 2
+		&-btn
+			cursor: pointer;
+			-webkit-transition: all 0.3s ease-in;
+			transition: all 0.3s ease-in;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: flex-start;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			transition: $default-transition
+			text-transform uppercase
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 16px;
+			letter-spacing: 2px;
+			color: $title-color
+			gap: 15px
+			path
+				stroke-dasharray: 60
+				transition: .5s
+			&:hover
+				opacity 1
+				path
+					stroke-dasharray: 9.5
+					transition: .5s
+	&__iframe
+		position: absolute;
+		top: 10%;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		opacity 0
+		pointer-events: none
+
+
+
+
+.swiper {
+  width: 700px;
+  height: 502px;
+  position relative
+  left: calc(60px + 0.5 * (100% - 1440px))
+}
+
+.swiper-slide
+	height: 172px
+	transition: .7s
+	overflow: hidden
+	img
+		transition: .7s
+		transform: scale(1.5)
+		transform-origin: top
+.swiper-slide-active
+	width: 360px!important
+	height: 502px!important
+	img
+		transition: .7s
+		transform: scale(1)
+		transform-origin: top
+	
+
+
+.swiper-wrapper
+	align-items: flex-end
+
+
+
+.swiper-pagination-current
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 12px;
+	color: #363636;
+	&:before
+		content: "0"
+.swiper-pagination-fraction
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 12px;
+	color: rgba(54, 54, 54, .5);
+	z-index 300
+.swiper-pagination-total
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 12px;
+	color: rgba(54, 54, 54, .5);
+	&:before
+		content: "0"
+
+
+
+span[class^='line']
+	overflow: hidden
+	display inline-block
+	line-height 20px
+span[class^='word']
+	display: inline-block;
+	text-align: center
+span:empty{
+	display none
+  }
+
+
+
+
+
+
+@keyframes rotatePins {
+
+	0% {
+		transform: rotateY(0)
+		
+		}
+	25% {
+		transform: rotateY(360deg)
+		
+		}
+	100% {
+		transform:	rotateY(360deg)
+		
+		}
+	
+}

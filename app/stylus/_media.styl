@@ -1,0 +1,362 @@
+/*==========  Desktop First  ==========*/
+
+// /* Large Devices, Wide Screens */
+@media (max-width : 1200px)
+    .header
+        &__nav
+            margin-right 130px
+@media (max-width : 1120px)
+    .stories__story
+        left: calc(535px + 1 * (100% - 1120px))
+@media (max-width : 1024px)
+    .hero__desc
+        left: 48vw
+    .header
+        &__nav
+            margin-right 20px
+        &__buttons
+            gap: 30px
+    .services
+        &__wrapper
+            justify-content: center
+// /* Medium Devices, Desktops */
+// @media (max-width : 992px)
+// /* Small Devices, Tablets */
+@media (max-width : 850px)
+    .header__nav-list-item a svg
+        left: 0
+        transform: scale(1.5)
+    .hero__wrapper-bottom-inner, .hero__wrapper-buttons
+        gap: 0 20px
+    .hero
+        margin-top 132px
+    .hero__title
+        min-height: 136px
+    .stories__story
+        top: 110%
+        min-height 375px
+        height: auto
+        left: 0
+        padding: 0 30px
+        width: 100%
+    .stories__story-item
+        padding 0
+    .stories__abs
+        padding: 0 30px
+    .stories__story-item-desc
+        font-size 14px
+        line-height 24px
+        max-width: 100%
+    .stories__buttons
+        gap:  0 20px
+    .swiper
+        left: -287px
+        height: 242px
+        
+    .swiper-slide-active
+        width: 180px!important
+        height: 251px!important
+
+    h2
+        font-size 40px
+        line-height 42px
+    .arrow
+        span
+            display none
+    .header
+        &__nav
+            display flex
+            justify-content: center
+            align-items: center
+            position: fixed
+            gap: 40px
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background: #fff
+            margin-right 0
+            z-index 999
+            transform: translateY(-100%)
+            width: 100vw
+            height: 100vh
+            &-list
+                display flex
+                justify-content: space-between
+                align-items: center
+                flex-direction: column
+                .header__search
+                    display block
+                a
+                    font-size 18px
+        &__phone-number
+            display none
+        &__burger
+            z-index 9999
+            display flex
+            align-items: center
+            flex-direction: column
+            justify-content: space-between
+
+    .hero
+        margin-bottom 50px
+        &__title
+            font-size 48px
+            line-height 45px
+            max-width: 341px
+            margin-bottom 115px
+        &__desc
+            left: 0%
+            width: 315px
+            top: 110%
+            line-height 24px
+        &__slider
+            margin-top 45px
+
+    .video
+        margin-bottom 100px
+        &__title
+            max-width: 221px
+        &__wrapper
+            align-items: flex-start
+            flex-direction: column
+            gap: 20px
+        &__abs-1
+            max-width: 35vw
+            top: 24%
+        &__abs-2
+            max-width: 84vw
+        &__abs-3
+            max-width: 35vw
+            top: 62%
+        &__desc
+            left: 0%
+            max-width: 315px
+        &__startBlock
+            bottom: -50px
+    
+    .services
+        margin-bottom 100px
+        &__title
+            margin-left 0
+        &__wrapper
+            display none
+        &__wrapper-hide
+            display block
+            position relative
+            left: calc(570px + 0.5 * (100% - 1440px))
+        .services__pages
+            display flex
+            justify-content: space-between
+            align-items: center
+            margin-top 45px
+
+
+    .stories
+        margin-bottom 560px
+        &__abs
+            bottom: -40px
+            left: 0
+            justify-content: space-between
+            .arrow
+                display block
+        &__pagination
+            margin-right 0
+        &__hidden
+            background: #fff
+            position absolute
+            top: 0%
+            left: 69%
+            height: 351px
+            width: 1000px
+        &__desc
+            margin: 0 auto 50px
+            &-item
+                padding: 0
+                &-title
+                    font-size 18px
+                    line-height 24px
+                    margin-bottom 10px
+                    text-align center
+                &-label
+                    margin-bottom 20px
+                    text-align center
+               
+        &__pages
+            top 400px
+            right: -47%
+        &__wrapper
+            right: 26%
+            &-top
+                .arrow
+                    display none
+
+
+    .map
+        margin-bottom 100px
+        &__pic
+            margin: 50px 0 50px
+        &__desc
+            max-width: 315px
+        &__wrapper-bottom
+            justify-content: center
+            gap: 10px
+        &__subtitle
+            text-align center
+            font-size 20px
+            line-height 28px
+        &__desc-bottom
+            text-align center
+
+    .footer
+        &__desc
+            max-width: 301px
+            display flex
+            gap: 30px
+            div
+                max-width: 150px
+                text-align center
+        &__copyright
+            display block
+            text-align center
+        &__wrapper
+            flex-direction: column
+            align-items: center
+            gap: 50px
+            & > .footer__social
+                display block
+                margin-top: 0;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                gap: 40px;
+                order: 6
+        &__title
+            max-width: 100%
+            text-align center
+            margin-bottom 20px
+        &__item
+            .footer__social
+                display none
+            .item-hidden
+                display block
+            .item-visible
+                display none
+            &:nth-child(3)
+                order: 5
+                .footer__list
+                    width: 285px
+                    display flex
+                    justify-content: space-between
+                    flex-wrap: wrap
+                    height: 76px
+                    flex-direction: column
+                    align-items: center
+                    gap: 40px 0
+                    &-item
+                        width: 50%
+                        margin-bottom 0
+                        text-align center
+            &:nth-child(2)
+                .footer__list
+                    width: 285px
+                    display flex
+                    justify-content: space-between
+                    flex-wrap: wrap
+                    height: 134px
+                    flex-direction: column
+                    align-items: center
+                    gap: 40px 0
+                    &-item
+                        width: 50%
+                        margin-bottom 0
+                        text-align center
+
+// /* Small Devices, Tablets */
+// @media (max-width : 568px)
+// /* Small Devices, Tablets */
+@media (max-width : 480px)
+
+    .stories
+        margin-bottom 600px
+    
+
+        &__slider
+            &-item
+                img
+                    height: 201px
+            
+    .services
+        &__wrapper-top
+            margin-bottom 60px
+    .stories
+        &__wrapper
+            right: 4%
+        &__hidden
+            left: 86%
+
+    .video
+        .wrapper
+            padding: 0
+        &__wrapper
+            padding: 0 30px
+        &__wrapper-block
+            padding: 90px 0 60px 0
+// /* Custom, iPhone Retina */
+@media (max-width : 390px)
+    .stories__wrapper-top .arrow
+        right: 230px
+    .stories__story-item-title
+        margin-bottom 0
+    .stories__story-item-label
+        margin-bottom 11px
+
+    .stories__story-item-desc-hidden
+        display block
+        font-size 11px
+        line-height 18px
+    .stories__story-item-desc
+        display none
+
+
+
+    .stories
+        &__wrapper
+            right: -2%
+        &__hidden
+            left: 91%
+@media (max-width : 375px)
+    .stories
+        &__wrapper
+            right: -3%
+        &__hidden
+            left: 91%
+    .hero__desc
+        width: 295px
+    .hero
+        &__title
+            font-size 45px
+
+@media (max-width : 340px)
+    .hero__wrapper-bottom
+        flex-direction: column
+        align-items: center
+        gap: 15px
+@media (max-width : 320px)
+
+
+    .services__wrapper-hide
+        .services__item-title
+            font-size 24px
+            line-height 30px
+        .services__item-desc
+            max-width: 200px
+    .stories
+        &__wrapper
+            right: -14%
+        &__hidden
+            left: 100%
+/**/
